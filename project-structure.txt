@@ -1,0 +1,46 @@
+vue-ecommerce-app/
+├── src/
+│   ├── api/
+│   │   ├── index.ts
+│   │   ├── products.ts
+│   │   ├── categories.ts
+│   │   └── types.ts
+│   ├── assets/
+│   │   └── scss/
+│   │       └── main.scss
+│   ├── components/
+│   │   ├── TheHeader.vue
+│   │   ├── TheFooter.vue
+│   │   ├── ProductCard.vue
+│   │   ├── ProductList.vue
+│   │   ├── ProductFilter.vue
+│   │   ├── CartWidget.vue
+│   │   └── FavoritesWidget.vue
+│   ├── layouts/
+│   │   └── default.vue
+│   ├── pages/
+│   │   ├── HomePage.vue
+│   │   ├── ProductListPage.vue
+│   │   ├── ProductDetailPage.vue
+│   │   ├── CartPage.vue
+│   │   ├── FavoritesPage.vue
+│   │   └── NotFoundPage.vue
+│   ├── stores/
+│   │   ├── products.ts
+│   │   ├── categories.ts
+│   │   ├── cart.ts
+│   │   └── favorites.ts
+│   ├── types/
+│   │   ├── product.ts
+│   │   ├── category.ts
+│   │   └── filter.ts
+│   ├── router/
+│   │   └── index.ts
+│   ├── utils/
+│   │   └── localStorage.ts
+│   ├── App.vue
+│   └── main.ts
+├── .eslintrc.js
+├── tsconfig.json
+├── vite.config.ts
+└── package.json
