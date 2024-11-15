@@ -1,4 +1,3 @@
-// src/stores/favorites.ts
 import { defineStore } from 'pinia';
 import type { Product } from '@/types/product';
 
