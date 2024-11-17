@@ -1,7 +1,5 @@
-// src/api/products.ts
 import { api } from './index';
 import type { Product } from '@/types/product';
-//import type { ProductFilter } from '@/types/filter';
 
 export const productsApi = {
   async getProducts(): Promise<Product[]> {

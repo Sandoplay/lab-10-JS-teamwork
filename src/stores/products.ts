@@ -1,4 +1,3 @@
-// src/stores/products.ts
 import { defineStore } from 'pinia';
 import { productsApi } from '@/api/products';
 import type { Product } from '@/types/product';
