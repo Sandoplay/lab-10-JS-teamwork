@@ -1,8 +1,8 @@
-import { defineStore } from 'pinia';
-import type { Product } from '@/types/product';
+import { defineStore } from 'pinia'
+import type { Product } from '@/types/product'
 
 interface CartItem extends Product {
-  quantity: number;
+  quantity: number
 }
 
 export const useCartStore = defineStore('cart', {
@@ -20,42 +20,27 @@ export const useCartStore = defineStore('cart', {
 
   actions: {
     addToCart(product: Product) {
-      const existingItem = this.items.find(item => item.id === product.id);
+      const existingItem = this.items.find(item => item.id === product.id)
       if (existingItem) {
-        existingItem.quantity += 1;
+        existingItem.quantity += 1
       } else {
-        this.items.push({ ...product, quantity: 1 });
+        this.items.push({ ...product, quantity: 1 })
       }
-      this.saveToLocalStorage();
     },
 
     removeFromCart(productId: number) {
-      this.items = this.items.filter(item => item.id !== productId);
-      this.saveToLocalStorage();
+      this.items = this.items.filter(item => item.id !== productId)
     },
 
     updateQuantity(productId: number, change: number) {
-      const item = this.items.find(item => item.id === productId);
+      const item = this.items.find(item => item.id === productId)
       if (item) {
-        item.quantity = Math.max(1, item.quantity + change);
-        this.saveToLocalStorage();
+        item.quantity = Math.max(1, item.quantity + change)
       }
     },
 
     clearCart() {
-      this.items = [];
-      this.saveToLocalStorage();
-    },
-
-    saveToLocalStorage() {
-      localStorage.setItem('cart', JSON.stringify(this.items));
-    },
-
-    loadFromLocalStorage() {
-      const savedItems = localStorage.getItem('cart');
-      if (savedItems) {
-        this.items = JSON.parse(savedItems);
-      }
+      this.items = []
     },
   },
-});
+})
